@@ -128,10 +128,10 @@ p:last-child{
 
 }
 .main-menu > ul > li > a {
-
+  transition: 0.3s;
 }
 .main-menu > ul > li > a:hover {
-
+  color: var(--theme__color1);
 }
 
 .header-right {
@@ -148,7 +148,10 @@ p:last-child{
   gap: 12px;
 }
 .language-select li {
-
+  transition: 0.3s;
+}
+.language-select li:hover {
+  opacity: 0.8;
 }
 /* header-end */
 
@@ -336,6 +339,10 @@ p:last-child{
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: 0.3s;
+}
+.hero__search .submit-btn:hover {
+  background: var(--theme__color2);
 }
 
 .hero__map-btn {
@@ -347,6 +354,11 @@ p:last-child{
   display: inline-flex;
   gap: 8px;
   white-space: nowrap;
+  transition: 0.3s;
+}
+.hero__map-btn:hover {
+  border-color: var(--theme__color1);
+  color: var(--theme__color1);
 }
 /* ---hero-section---end */
 
@@ -612,6 +624,9 @@ p:last-child{
   color: #000 !important;
   background: #F2F2F2 !important;
 }
+.slider-arrow-1 .owl-nav button:hover {
+  opacity: 0.8;
+}
 
 .slider-dots-1 .owl-dots {
   display: flex;
@@ -624,7 +639,9 @@ p:last-child{
   width: 21px;
   background: #F2F2F2 !important;
   border-radius: 50%;
+  transition: 0.3s;
 }
+.slider-dots-1 .owl-dot:hover,
 .slider-dots-1 .owl-dot.active {
   background: var(--theme__color1) !important;
 }
