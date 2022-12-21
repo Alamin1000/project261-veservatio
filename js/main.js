@@ -25,6 +25,37 @@
   });
 
   // owl-carousel
+  $('.product-slider-active').owlCarousel({
+    loop:false,
+    margin:35,
+    items:4,
+    stagePadding: 190,
+    responsiveClass:true,
+    nav:true,
+    dots:true,
+    navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
+    responsive:{
+        0:{
+          
+        },
+        575:{
+          
+        },
+        767:{
+          
+        },
+        991:{
+          
+        },
+        1199:{
+          
+        },
+        1599:{
+          
+      }
+    }
+  });
+
   $('.showcase__slider-active').owlCarousel({
     loop:false,
     margin:35,
@@ -61,6 +92,11 @@
     }
   });
 
+
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 })(jQuery);
 
