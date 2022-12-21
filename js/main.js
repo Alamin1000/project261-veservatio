@@ -25,26 +25,39 @@
   });
 
   // owl-carousel
-  $('.brand-active').owlCarousel({
-    loop:true,
-    margin:50,
+  $('.showcase__slider-active').owlCarousel({
+    loop:false,
+    margin:35,
+    items:1,
+    stagePadding: 190,
     responsiveClass:true,
-    nav:false,
+    nav:true,
+    dots:true,
     navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
     responsive:{
         0:{
-            items:1,
-            nav:false
+          stagePadding: 20,
+          margin:20
         },
-        600:{
-            items:3,
-            nav:false
+        575:{
+          stagePadding: 100,
+          margin:20
         },
-        1000:{
-            items:4,
-            nav:false,
-            loop:false
-        }
+        767:{
+          stagePadding: 200,
+          margin:20
+        },
+        991:{
+          stagePadding: 150,
+          margin:20
+        },
+        1199:{
+          stagePadding: 180,
+          margin:20
+        },
+        1599:{
+          stagePadding: 190,
+      }
     }
   });
 

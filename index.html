@@ -49,12 +49,28 @@
 			<div class="header_in">
 				<div class="container">
 					<div class="header-section__inner">
-						<div class="main-menu">
+						<div class="main-menu d-lg-block d-none">
 							<ul>
 								<li><a href="#">HOME</a></li>
 								<li><a href="#">PERCHE RESERVATIO</a></li>
 								<li><a href="#">REGISTRA IL MIO RISTORANTE</a></li>
 								<li><a href="#">CARRELLO</a></li>
+							</ul>
+						</div>
+
+						<a href="#" class="offcanvas-open d-lg-none">
+							<i class="far fa-bars"></i>
+						</a>
+
+						<div class="header-right">
+							<div class="header-user">
+								<a href="#">
+									<div class="icon"><img src="images/icon/header-user.png" alt=""></div>
+								</a>
+							</div>
+							<ul class="language-select">
+								<li><a href="#"><img src="images/flag-italy.png" alt=""></a></li>
+								<li><a href="#"><img src="images/flag-uk.png" alt=""></a></li>
 							</ul>
 						</div>
 					</div>
@@ -87,7 +103,7 @@
 								</div>
 							</div>
 							<a href="#" class="hero__map-btn">
-								<span class="txt">Mappa Ristoranti</span>
+								<div class="txt">Mappa Ristoranti</div>
 								<img src="images/icon/location.svg" alt="" class="icon">
 							</a>
 						</div>
@@ -103,7 +119,7 @@
 
 						<div class="service-section__title sec-title cont-blk cont-blk--center">
 							<h4 class="h4">I nostri servizi</h4>
-							<h2 class="h2">
+							<h2 class="h2 mb-0">
 								<span class="txt">
 									Cerca i ristoranti che <br> rispecchiano i tuoi gusti
 								</span>
@@ -160,21 +176,20 @@
 
 						<div class="showcase-section__title sec-title cont-blk">
 							<h4 class="h4">Le nostre attività</h4>
-							<h2 class="h2">
+							<h2 class="h2 mb-0">
 								<span class="txt">
 									Le migliori attività <br>
 									su Reservatio
 								</span>
-								<img src="images/service-header-shape.svg" alt="" class="shape">
 							</h2>
 						</div>
 
 						<div class="showcase__m-row">
-							<div class="showcase__mr-left">
+							<div class="showcase__mr__left">
 								<div class="showcase__nav">
 									<ul class="nav">
 										<li>
-											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
+											<a class="active" href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
 												<div class="icon">
 													<img src="images/icon/burger.svg" alt="">
 												</div>
@@ -182,7 +197,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
+											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-2">
 												<div class="icon">
 													<img src="images/icon/pizza.svg" alt="">
 												</div>
@@ -190,7 +205,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
+											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-3">
 												<div class="icon">
 													<img src="images/icon/pasticceria.svg" alt="">
 												</div>
@@ -198,7 +213,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
+											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-4">
 												<div class="icon">
 													<img src="images/icon/sushi.svg" alt="">
 												</div>
@@ -206,7 +221,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-1">
+											<a href="#" data-bs-toggle="tab" data-bs-target="#showcase-pane-5">
 												<div class="icon">
 													<img src="images/icon/trattoria.svg" alt="">
 												</div>
@@ -216,10 +231,10 @@
 									</ul>
 								</div>
 							</div>
-							<div class="showcase__mr-right">
+							<div class="showcase__mr__right">
 								<div class="showcase__tab-content tab-content">
 									<!-- showcase__tab-pane -->
-									<div class="showcase__tab-pane">
+									<div class="showcase__tab-pane tab-pane fade show active" id="showcase-pane-1">
 										<div class="showcase__slider showcase__slider-active owl-carousel slider-arrow-1 slider-dots-1">
 											<div class="showcase__slide">
 												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
@@ -232,6 +247,147 @@
 											</div>
 											<div class="showcase__slide">
 												<div class="showcase__card" style="background: url('images/showcase-item-2.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- showcase__tab-pane-end -->
+									<!-- showcase__tab-pane -->
+									<div class="showcase__tab-pane tab-pane fade" id="showcase-pane-2">
+										<div class="showcase__slider showcase__slider-active owl-carousel slider-arrow-1 slider-dots-1">
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-2.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- showcase__tab-pane-end -->
+									<!-- showcase__tab-pane -->
+									<div class="showcase__tab-pane tab-pane fade" id="showcase-pane-3">
+										<div class="showcase__slider showcase__slider-active owl-carousel slider-arrow-1 slider-dots-1">
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-2.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- showcase__tab-pane-end -->
+									<!-- showcase__tab-pane -->
+									<div class="showcase__tab-pane tab-pane fade" id="showcase-pane-4">
+										<div class="showcase__slider showcase__slider-active owl-carousel slider-arrow-1 slider-dots-1">
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-2.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- showcase__tab-pane-end -->
+									<!-- showcase__tab-pane -->
+									<div class="showcase__tab-pane tab-pane fade" id="showcase-pane-5">
+										<div class="showcase__slider showcase__slider-active owl-carousel slider-arrow-1 slider-dots-1">
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-2.png');">
+													<div class="showcase__card__content">
+														<h3>Nome Pizzeria</h3>
+														<h4><span class="small">a partire da</span> 7.49$</h4>
+														<a href="#" class="bt-btn">Scopri di più <i class="far fa-chevron-right chevron"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="showcase__slide">
+												<div class="showcase__card" style="background: url('images/showcase-item-1.png');">
 													<div class="showcase__card__content">
 														<h3>Nome Pizzeria</h3>
 														<h4><span class="small">a partire da</span> 7.49$</h4>
@@ -252,22 +408,24 @@
 			<!-- showcase-section-end -->
 
 
-
 			<!-- argument-section -->
 			<section class="argument-section">
+				<img src="images/closing-arguament-glow.png" alt="" class="argument-bg-shape">
 				<div class="container">
 					<div class="argument-section__inner">
 						<div class="argument__content-box">
 							<div class="argument__content-box__left">
 								<div class="cont-blk">
-									<h4 class="h4">
+									<h4 class="h4 mb-3">
 										<span class="txt">Le nostre attività</span>
 										<img src="images/closing-arguament-header-shape.svg" alt="" class="shape">
 									</h4>
 									<h2 class="h2">Sei il proprietario di <br> un ristorante?</h2>
 
-									<h6>Registra il tuo ristorante</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+									<h6 class="h6">Registra il tuo ristorante</h6>
+									<p>Lorem ipsum dolor sit amet, consectetur 
+									 <br>	adipiscing elit. </p>
+									 <a href="#" class="default-button bottom-button">Registrati</a>
 								</div>
 							</div>
 							<div class="argument__content-box__right">
@@ -280,10 +438,6 @@
 				</div>
 			</section>
 			<!-- argument-section-end -->
-
-
-
-
 
 
 		</main><!-- main end -->
@@ -309,10 +463,11 @@
 							</ul>
 							<p class="copyright">
 								Copyright &copy; 2020 - 2022. Tutti i diritti riservati.
+								<br>
 								P. iva IT-03907850923
 							</p>
 						</div>
-						<div class="footer__top__menu-column">
+						<div class="footer__top__menu-column footer__top__menu-column--1">
 							<ul class="footer-menu">
 								<li><a href="#">Registra la tua attivita</a></li>
 								<li><a href="#">Perche Reservatio</a></li>
@@ -323,7 +478,7 @@
 								<li><a href="#">FAQ</a></li>
 							</ul>
 						</div>
-						<div class="footer__top__menu-column">
+						<div class="footer__top__menu-column footer__top__menu-column--2">
 							<ul class="footer-menu">
 								<li><a href="#">Iscriviti alla newsletter</a></li>
 								<li><a href="#">Termini e Condizioni</a></li>
