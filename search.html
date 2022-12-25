@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<title>Reservatio</title>
@@ -76,7 +77,8 @@
 					</div>
 				</div>
 			</div>
-		</header><!--End header-section -->
+		</header>
+		<!--End header-section -->
 
 		<!-- main -->
 		<main>
@@ -101,6 +103,37 @@
 									<input type="text" class="input" placeholder="Cerca...">
 									<button class="submit-btn">Cerca</button>
 								</div>
+								<div class="hero__search__dropdown">
+									<ul class="hero__search__dropdown__ul">
+										<li>
+											<!-- <div class="tp">Frame 242342</div> -->
+											<div class="bt">
+												<div class="icon">
+													<img src="images/icon/h-search-location.svg" alt="">
+												</div>
+												<div class="txt">Usa la posizione attuale</div>
+											</div>
+										</li>
+										<li>
+											<!-- <div class="tp">Frame 242342</div> -->
+											<div class="bt">
+												<div class="icon">
+													<img src="images/icon/h-search-map-pointer.svg" alt="">
+												</div>
+												<div class="txt">Napoli</div>
+											</div>
+										</li>
+										<li>
+											<!-- <div class="tp">Frame 242342</div> -->
+											<div class="bt">
+												<div class="icon">
+													<img src="images/icon/h-search-map-pointer.svg" alt="">
+												</div>
+												<div class="txt">Salerno</div>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 							<a href="#" class="hero__map-btn">
 								<div class="txt">Mappa Ristoranti</div>
@@ -111,7 +144,7 @@
 				</div>
 			</section><!-- hero-section end -->
 
-			
+
 			<!-- category-section -->
 			<section class="category-section">
 				<div class="container">
@@ -123,16 +156,69 @@
 								<p class="p-sm">Seleziona la categoria desiderata </p>
 							</div>
 							<div class="category__title__right">
-								<p class="short-by">Ordinato per consigliati</p>
-								<a href="#" class="filter-btn">
+								<p class="short-by">Ordinato per consigliati <img src="images/icon/short.svg" alt="">
+								</p>
+								<a href="#" class="filter-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+									<div class="not">2</div>
 									<img src="images/icon/filter-slider.png" alt="" class="icon">
 									<span class="txt">Filtri</span>
 								</a>
 							</div>
 						</div>
 
-						
-						<div class="category_wrap">
+
+						<div class="category_wrap category-wrap-slider owl-carousel">
+							<!-- category-item -->
+							<label class="category-item" style="background: url('images/category-1.png');">
+								<input class="input-select" type="radio" name="category-select" selected>
+								<div class="category-item__background"></div>
+								<div class="category-item__content">
+									<h3>
+										<div class="icon"><img src="images/icon/sushi.svg" alt=""></div>
+										<span class="txt">Pizzeria</span>
+									</h3>
+								</div>
+							</label>
+							<!-- category-item-end -->
+							<!-- category-item -->
+							<label class="category-item" style="background: url('images/category-2.png');">
+								<input class="input-select" type="radio" name="category-select">
+								<div class="category-item__background"></div>
+								<div class="category-item__content">
+									<h3>
+										<div class="icon"><img src="images/icon/sushi.svg" alt=""></div>
+										<span class="txt">Paninoteca</span>
+									</h3>
+								</div>
+							</label>
+							<!-- category-item-end -->
+							<!-- category-item -->
+							<label class="category-item" style="background: url('images/category-3.png');">
+								<input class="input-select" type="radio" name="category-select">
+								<div class="category-item__background"></div>
+								<div class="category-item__content">
+									<h3>
+										<div class="icon"><img src="images/icon/sushi.svg" alt=""></div>
+										<span class="txt">Sushi</span>
+									</h3>
+								</div>
+							</label>
+							<!-- category-item-end -->
+							<!-- category-item -->
+							<label class="category-item" style="background: url('images/category-4.png');">
+								<input class="input-select" type="radio" name="category-select">
+								<div class="category-item__background"></div>
+								<div class="category-item__content">
+									<h3>
+										<div class="icon"><img src="images/icon/sushi.svg" alt=""></div>
+										<span class="txt">Birreria</span>
+									</h3>
+								</div>
+							</label>
+							<!-- category-item-end -->
+						</div>
+
+						<div class="category__main__slider owl-carousel d-none">
 							<!-- category-item -->
 							<div class="category-item" style="background: url('images/category-1.png');">
 								<div class="category-item__content">
@@ -187,7 +273,7 @@
 			<section class="product-sl-section">
 				<div class="container">
 					<div class="product-sl-section__inner">
-						
+
 						<div class="product-sl-section__title">
 							<h3 class="h3">I più amati <span class="theme-deem">Napoli</span></h3>
 						</div>
@@ -197,6 +283,7 @@
 								<!-- product-card -->
 								<div class="product-card">
 									<div class="product-card__top" style="background: url('images/product-image.png');">
+										<a href="#" class="product-card__top__clickable-link"></a>
 										<div class="product-card__tl-badge">COMING SOON</div>
 										<div class="product-card__tr-menu">
 											<div class="product-card__tr-icons">
@@ -208,87 +295,53 @@
 												</a>
 											</div>
 											<div class="product-card__tr__meats">
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Preferito">
 													<img src="images/icon/favorite.svg" alt="" class="icon">
 													<span class="txt">20</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Commenti">
 													<img src="images/icon/star-comment.png" alt="" class="icon">
 													<span class="txt">100</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Visualizzazioni">
 													<img src="images/icon/view-eye.svg" alt="" class="icon">
 													<span class="txt">90</span>
 												</div>
 											</div>
-											<div class="product-card__bl">
-												<img src="images/icon/dir.svg" alt="" class="dir">
+											<a href="#" class="product-card__bl">
+												
+													<img src="images/icon/dir.svg" alt="" class="dir">
 												<span class="txt">Napoli, NA</span>
+												
 												<div class="avail-cats">
-													<div class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+													<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
 														<img src="images/icon/pizza.svg" alt="">
-													</div>
-													<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													</button>
+													<button href="#" class="avail-cat" data-bs-toggle="tooltip"
+														title="Sushi">
 														<img src="images/icon/sushi.svg" alt="">
-													</a>
+													</button>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="product-card__main">
 										<div class="product-card__main__left">
-											<h3>Nome ristorante</h3>
-											<p class="time">
-												10:00 AM - 12:00 PM
+											<h3><a href="#">Nome ristorante</a></h3>
+											<div class="product__card__drop">
+												<p class="time">10:00 AM - 12:00 PM</p>
+
 												<div class="dropdown details-arr">
 													<a class="" href="#" data-bs-toggle="dropdown">
 														<img src="images/icon/arr-btm.png" alt="">
 													</a>
-													<div class="dropdown-menu">
-														<div class="time-tooltip">
-															<div class="time-tooltip__head">
-																<h3>ORARI DI APERTURA </h3>
-															</div>
-															<div class="time-tooltip__body">
-																<div class="time-tooltip__table">
-																	<table>
-																		<tr>
-																			<td><span class="fw-700">Lunedì</span></td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Martedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Mercoledì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Giovedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Venerdì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Sabato</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Domenica</td>
-																			<td><span class="color-theme1">Chiuso</span></td>
-																		</tr>
-																		
-																	</table>
-																</div>
-															</div>
-														</div>
-													</div>
+
 												</div>
-												
-											</p>
+
+											</div>
 											<p class="pm">Cucina: cinese, giapponese</p>
 										</div>
 										<div class="product-card__main__right">
@@ -312,6 +365,7 @@
 								<!-- product-card -->
 								<div class="product-card">
 									<div class="product-card__top" style="background: url('images/product-image.png');">
+										<a href="#" class="product-card__top__clickable-link"></a>
 										<div class="product-card__tl-badge">COMING SOON</div>
 										<div class="product-card__tr-menu">
 											<div class="product-card__tr-icons">
@@ -323,87 +377,56 @@
 												</a>
 											</div>
 											<div class="product-card__tr__meats">
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+												<div class="port-badge">
+													Preferito
+												</div>
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Preferito">
 													<img src="images/icon/favorite.svg" alt="" class="icon">
 													<span class="txt">20</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Commenti">
 													<img src="images/icon/star-comment.png" alt="" class="icon">
 													<span class="txt">100</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Visualizzazioni">
 													<img src="images/icon/view-eye.svg" alt="" class="icon">
 													<span class="txt">90</span>
 												</div>
 											</div>
-											<div class="product-card__bl">
-												<img src="images/icon/dir.svg" alt="" class="dir">
+											<a href="#" class="product-card__bl">
+												
+													<img src="images/icon/dir.svg" alt="" class="dir">
 												<span class="txt">Napoli, NA</span>
+												
 												<div class="avail-cats">
-													<div class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+													<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
 														<img src="images/icon/pizza.svg" alt="">
-													</div>
-													<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													</button>
+													<button href="#" class="avail-cat" data-bs-toggle="tooltip"
+														title="Sushi">
 														<img src="images/icon/sushi.svg" alt="">
-													</a>
+													</button>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="product-card__main">
 										<div class="product-card__main__left">
-											<h3>Nome ristorante</h3>
-											<p class="time">
-												10:00 AM - 12:00 PM
+											<h3><a href="#">Nome ristorante</a></h3>
+											<div class="product__card__drop">
+												<p class="time">10:00 AM - 12:00 PM</p>
+
 												<div class="dropdown details-arr">
 													<a class="" href="#" data-bs-toggle="dropdown">
 														<img src="images/icon/arr-btm.png" alt="">
 													</a>
-													<div class="dropdown-menu">
-														<div class="time-tooltip">
-															<div class="time-tooltip__head">
-																<h3>ORARI DI APERTURA </h3>
-															</div>
-															<div class="time-tooltip__body">
-																<div class="time-tooltip__table">
-																	<table>
-																		<tr>
-																			<td><span class="fw-700">Lunedì</span></td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Martedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Mercoledì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Giovedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Venerdì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Sabato</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Domenica</td>
-																			<td><span class="color-theme1">Chiuso</span></td>
-																		</tr>
-																		
-																	</table>
-																</div>
-															</div>
-														</div>
-													</div>
+
 												</div>
-												
-											</p>
+
+											</div>
 											<p class="pm">Cucina: cinese, giapponese</p>
 										</div>
 										<div class="product-card__main__right">
@@ -427,6 +450,7 @@
 								<!-- product-card -->
 								<div class="product-card">
 									<div class="product-card__top" style="background: url('images/product-image.png');">
+										<a href="#" class="product-card__top__clickable-link"></a>
 										<div class="product-card__tl-badge">COMING SOON</div>
 										<div class="product-card__tr-menu">
 											<div class="product-card__tr-icons">
@@ -438,87 +462,53 @@
 												</a>
 											</div>
 											<div class="product-card__tr__meats">
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Preferito">
 													<img src="images/icon/favorite.svg" alt="" class="icon">
 													<span class="txt">20</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Commenti">
 													<img src="images/icon/star-comment.png" alt="" class="icon">
 													<span class="txt">100</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Visualizzazioni">
 													<img src="images/icon/view-eye.svg" alt="" class="icon">
 													<span class="txt">90</span>
 												</div>
 											</div>
-											<div class="product-card__bl">
-												<img src="images/icon/dir.svg" alt="" class="dir">
+											<a href="#" class="product-card__bl">
+												
+													<img src="images/icon/dir.svg" alt="" class="dir">
 												<span class="txt">Napoli, NA</span>
+												
 												<div class="avail-cats">
-													<div class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+													<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
 														<img src="images/icon/pizza.svg" alt="">
-													</div>
-													<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													</button>
+													<button href="#" class="avail-cat" data-bs-toggle="tooltip"
+														title="Sushi">
 														<img src="images/icon/sushi.svg" alt="">
-													</a>
+													</button>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="product-card__main">
 										<div class="product-card__main__left">
-											<h3>Nome ristorante</h3>
-											<p class="time">
-												10:00 AM - 12:00 PM
+											<h3><a href="#">Nome ristorante</a></h3>
+											<div class="product__card__drop">
+												<p class="time">10:00 AM - 12:00 PM</p>
+
 												<div class="dropdown details-arr">
 													<a class="" href="#" data-bs-toggle="dropdown">
 														<img src="images/icon/arr-btm.png" alt="">
 													</a>
-													<div class="dropdown-menu">
-														<div class="time-tooltip">
-															<div class="time-tooltip__head">
-																<h3>ORARI DI APERTURA </h3>
-															</div>
-															<div class="time-tooltip__body">
-																<div class="time-tooltip__table">
-																	<table>
-																		<tr>
-																			<td><span class="fw-700">Lunedì</span></td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Martedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Mercoledì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Giovedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Venerdì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Sabato</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Domenica</td>
-																			<td><span class="color-theme1">Chiuso</span></td>
-																		</tr>
-																		
-																	</table>
-																</div>
-															</div>
-														</div>
-													</div>
+
 												</div>
-												
-											</p>
+
+											</div>
 											<p class="pm">Cucina: cinese, giapponese</p>
 										</div>
 										<div class="product-card__main__right">
@@ -542,6 +532,7 @@
 								<!-- product-card -->
 								<div class="product-card">
 									<div class="product-card__top" style="background: url('images/product-image.png');">
+										<a href="#" class="product-card__top__clickable-link"></a>
 										<div class="product-card__tl-badge">COMING SOON</div>
 										<div class="product-card__tr-menu">
 											<div class="product-card__tr-icons">
@@ -553,87 +544,53 @@
 												</a>
 											</div>
 											<div class="product-card__tr__meats">
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Preferito">
 													<img src="images/icon/favorite.svg" alt="" class="icon">
 													<span class="txt">20</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Commenti">
 													<img src="images/icon/star-comment.png" alt="" class="icon">
 													<span class="txt">100</span>
 												</div>
-												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+												<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+													title="Visualizzazioni">
 													<img src="images/icon/view-eye.svg" alt="" class="icon">
 													<span class="txt">90</span>
 												</div>
 											</div>
-											<div class="product-card__bl">
-												<img src="images/icon/dir.svg" alt="" class="dir">
+											<a href="#" class="product-card__bl">
+												
+													<img src="images/icon/dir.svg" alt="" class="dir">
 												<span class="txt">Napoli, NA</span>
+												
 												<div class="avail-cats">
-													<div class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+													<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
 														<img src="images/icon/pizza.svg" alt="">
-													</div>
-													<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													</button>
+													<button href="#" class="avail-cat" data-bs-toggle="tooltip"
+														title="Sushi">
 														<img src="images/icon/sushi.svg" alt="">
-													</a>
+													</button>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="product-card__main">
 										<div class="product-card__main__left">
-											<h3>Nome ristorante</h3>
-											<p class="time">
-												10:00 AM - 12:00 PM
+											<h3><a href="#">Nome ristorante</a></h3>
+											<div class="product__card__drop">
+												<p class="time">10:00 AM - 12:00 PM</p>
+
 												<div class="dropdown details-arr">
 													<a class="" href="#" data-bs-toggle="dropdown">
 														<img src="images/icon/arr-btm.png" alt="">
 													</a>
-													<div class="dropdown-menu">
-														<div class="time-tooltip">
-															<div class="time-tooltip__head">
-																<h3>ORARI DI APERTURA </h3>
-															</div>
-															<div class="time-tooltip__body">
-																<div class="time-tooltip__table">
-																	<table>
-																		<tr>
-																			<td><span class="fw-700">Lunedì</span></td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Martedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Mercoledì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Giovedì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Venerdì</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Sabato</td>
-																			<td>12:00-15:00 <br> 19:00-01:00</td>
-																		</tr>
-																		<tr>
-																			<td>Domenica</td>
-																			<td><span class="color-theme1">Chiuso</span></td>
-																		</tr>
-																		
-																	</table>
-																</div>
-															</div>
-														</div>
-													</div>
+
 												</div>
-												
-											</p>
+
+											</div>
 											<p class="pm">Cucina: cinese, giapponese</p>
 										</div>
 										<div class="product-card__main__right">
@@ -659,7 +616,7 @@
 			</section>
 			<!-- product-slider-section-end -->
 
-		
+
 			<!-- product-list-section -->
 			<div class="product-list-section">
 				<div class="container">
@@ -673,6 +630,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tl-badge">COMING SOON</div>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
@@ -684,38 +642,42 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<div class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+												<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
 													<img src="images/icon/pizza.svg" alt="">
-												</div>
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												</button>
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -754,17 +716,18 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -786,6 +749,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
 											<a class="product-card__tr-icons__item" href="#">
@@ -796,35 +760,39 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -863,17 +831,18 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -895,6 +864,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
 											<a class="product-card__tr-icons__item" href="#">
@@ -905,35 +875,39 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -972,17 +946,18 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -1004,6 +979,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
 											<a class="product-card__tr-icons__item" href="#">
@@ -1014,35 +990,39 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -1081,17 +1061,18 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -1113,6 +1094,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
 											<a class="product-card__tr-icons__item" href="#">
@@ -1123,35 +1105,39 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -1190,17 +1176,18 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -1222,6 +1209,7 @@
 							<!-- product-card -->
 							<div class="product-card">
 								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
 									<div class="product-card__tr-menu">
 										<div class="product-card__tr-icons">
 											<a class="product-card__tr-icons__item" href="#">
@@ -1232,35 +1220,39 @@
 											</a>
 										</div>
 										<div class="product-card__tr__meats">
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Preferito">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
 												<img src="images/icon/favorite.svg" alt="" class="icon">
 												<span class="txt">20</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Commenti">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
 												<img src="images/icon/star-comment.png" alt="" class="icon">
 												<span class="txt">100</span>
 											</div>
-											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip" title="Visualizzazioni">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
 												<img src="images/icon/view-eye.svg" alt="" class="icon">
 												<span class="txt">90</span>
 											</div>
 										</div>
-										<div class="product-card__bl">
+										<a href="#" class="product-card__bl">
 											<img src="images/icon/dir.svg" alt="" class="dir">
 											<span class="txt">Napoli, NA</span>
 											<div class="avail-cats">
-												<a href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
 													<img src="images/icon/sushi.svg" alt="">
-												</a>
+												</button>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="product-card__main">
 									<div class="product-card__main__left">
-										<h3>Nome ristorante</h3>
-										<p class="time">
-											10:00 AM - 12:00 PM
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
 											<div class="dropdown details-arr">
 												<a class="" href="#" data-bs-toggle="dropdown">
 													<img src="images/icon/arr-btm.png" alt="">
@@ -1299,17 +1291,715 @@
 																	</tr>
 																	<tr>
 																		<td>Domenica</td>
-																		<td><span class="color-theme1">Chiuso</span></td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
 																	</tr>
-																	
+
 																</table>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											
-										</p>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+						</div>
+
+						<div class="product-list-wrap2 owl-carousel d-none">
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tl-badge">COMING SOON</div>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button class="avail-cat" data-bs-toggle="tooltip" title="Pizzeria">
+													<img src="images/icon/pizza.svg" alt="">
+												</button>
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<p class="pm">Cucina: cinese, giapponese</p>
+									</div>
+									<div class="product-card__main__right">
+										<div class="product-card__rating">
+											<span class="txt">4.1</span>
+											<img src="images/icon/star.svg" alt="" class="star">
+										</div>
+									</div>
+								</div>
+								<div class="product-card__bton">
+									<a href="#" class="p-button p-button--border">
+										<img src="images/icon/menu-list.svg" alt="" class="menu-l-i">
+										<span class="txt">Menu</span>
+									</a>
+									<a href="#" class="p-button">Tavoli</a>
+								</div>
+							</div>
+							<!-- product-card-end -->
+							<!-- product-card -->
+							<div class="product-card">
+								<div class="product-card__top" style="background: url('images/product-image.png');">
+									<a href="#" class="product-card__top__clickable-link"></a>
+									<div class="product-card__tr-menu">
+										<div class="product-card__tr-icons">
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/crops.png" alt="">
+											</a>
+											<a class="product-card__tr-icons__item" href="#">
+												<img src="images/icon/vegetables.png" alt="">
+											</a>
+										</div>
+										<div class="product-card__tr__meats">
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Preferito">
+												<img src="images/icon/favorite.svg" alt="" class="icon">
+												<span class="txt">20</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Commenti">
+												<img src="images/icon/star-comment.png" alt="" class="icon">
+												<span class="txt">100</span>
+											</div>
+											<div class="product-card__tr__meats__item" data-bs-toggle="tooltip"
+												title="Visualizzazioni">
+												<img src="images/icon/view-eye.svg" alt="" class="icon">
+												<span class="txt">90</span>
+											</div>
+										</div>
+										<a href="#" class="product-card__bl">
+											<img src="images/icon/dir.svg" alt="" class="dir">
+											<span class="txt">Napoli, NA</span>
+											<div class="avail-cats">
+												<button href="#" class="avail-cat" data-bs-toggle="tooltip" title="Sushi">
+													<img src="images/icon/sushi.svg" alt="">
+												</button>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="product-card__main">
+									<div class="product-card__main__left">
+										<h3><a href="#">Nome ristorante</a></h3>
+										<div class="product__card__drop">
+											<p class="time">10:00 AM - 12:00 PM</p>
+
+											<div class="dropdown details-arr">
+												<a class="" href="#" data-bs-toggle="dropdown">
+													<img src="images/icon/arr-btm.png" alt="">
+												</a>
+												<div class="dropdown-menu">
+													<div class="time-tooltip">
+														<div class="time-tooltip__head">
+															<h3>ORARI DI APERTURA </h3>
+														</div>
+														<div class="time-tooltip__body">
+															<div class="time-tooltip__table">
+																<table>
+																	<tr>
+																		<td><span class="fw-700">Lunedì</span></td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Martedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Mercoledì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Giovedì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Venerdì</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Sabato</td>
+																		<td>12:00-15:00 <br> 19:00-01:00</td>
+																	</tr>
+																	<tr>
+																		<td>Domenica</td>
+																		<td><span class="color-theme1">Chiuso</span>
+																		</td>
+																	</tr>
+
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
 										<p class="pm">Cucina: cinese, giapponese</p>
 									</div>
 									<div class="product-card__main__right">
@@ -1351,9 +2041,9 @@
 									<h2 class="h2">Sei il proprietario di <br> un ristorante?</h2>
 
 									<h6 class="h6">Registra il tuo ristorante</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur 
-									 <br>	adipiscing elit. </p>
-									 <a href="#" class="default-button bottom-button">Registrati</a>
+									<p>Lorem ipsum dolor sit amet, consectetur
+										<br> adipiscing elit. </p>
+									<a href="#" class="default-button bottom-button">Registrati</a>
 								</div>
 							</div>
 							<div class="argument__content-box__right">
@@ -1419,22 +2109,23 @@
 					<a href="#" class="footer-top-arrow"><img src="images/footer-top-arrow.png" alt=""></a>
 				</div>
 			</div>
-		</footer><!--End footer-section -->
+		</footer>
+		<!--End footer-section -->
 	</div><!-- main-wrap -->
 
 
-	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-		Launch demo modal
-	</button>
-	
+
+
+
+
 	<!-- Modal -->
-	<div class="modal fade filter-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade filter-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal__title">
 					<h3>Seleziona filtri</h3>
-					<a href="#" data-bs-dismiss="modal" class="modal-close"></a>
+					<a href="#" data-bs-dismiss="modal" class="modal-close"><i class="fal fa-times"></i></a>
 				</div>
 				<div class="modal__main">
 					<div class="filter-fm">
@@ -1582,7 +2273,8 @@
 			</div>
 		</div>
 	</div>
-	
+
+
 
 	<!-- <div class="time-tooltip">
 		<div class="time-tooltip__head">
@@ -1633,7 +2325,8 @@
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js"></script>
 	<!-- End All Js -->
-	
+
 
 </body>
+
 </html>
