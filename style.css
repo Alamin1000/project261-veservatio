@@ -389,6 +389,7 @@ p:last-child {
   display: flex;
   background: #FFFFFF;
   z-index: 2;
+  border-radius: inherit;
 }
 .hero__search__icon {
   position: absolute;
@@ -694,14 +695,38 @@ p:last-child {
   flex-grow: 1;
 }
 
-.showcase__tab-content {}
+.showcase__tab-content {
 
-.showcase__tab-pane {}
+}
 
-.showcase__slider {}
+.showcase__tab-pane {
+  /* display: block !important; */
+}
+
+.showcase__slider {
+  display: none !important;
+  opacity: 0;
+}
+.showcase__tab-pane.show .showcase__slider {
+  animation: fadeIn 0.3S forwards 0.4s;
+  display: block !important;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+
 
 .showcase__slider .owl-stage {
   padding-left: 0px !important;
+  display: flex;
+  flex-wrap: nowrap !important;
 }
 
 .showcase__slider .owl-nav {
@@ -1078,6 +1103,7 @@ p:last-child {
   align-items: end;
   transition: .3s;
   position: relative;
+  cursor: pointer;
 }
 .category-item .input-select {
   display: none;
@@ -1221,6 +1247,7 @@ p:last-child {
   display: inline-flex;
   align-items: center;
   width: 150px;
+  cursor: pointer;
 }
 
 .filter-fm__check-group label input {
