@@ -29,9 +29,10 @@
 
 
     .hero-logo {
-        top: 21px;
+        top: 30px;
         left: 35px;
-        width: 220px;
+        /* width: 220px; */
+        font-size: 40px;
     }
 
     .hero-left-shape {
@@ -404,9 +405,10 @@
     }
 
     .hero-logo {
-        top: 10px;
-        left: 8px;
-        width: 178px;
+        top: 14px;
+        left: 15px;
+        font-size: 30px;
+        /* width: 178px; */
     }
 
     .hero-left-shape {
@@ -1001,9 +1003,9 @@
 
 @media (max-width: 370px) {
     .hero-logo {
-        top: 8px;
-        left: 5px;
-        width: 165px;
+        top: 18px;
+        left: 12px;
+        font-size: 27px;
     }
 
     .argument__content-box__left {
