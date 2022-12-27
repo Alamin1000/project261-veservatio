@@ -38,21 +38,28 @@
     responsive: {
       0: {
         items: 1,
+        stagePadding: 13,
+        margin: 12,
+      },
+      370: {
+        items: 1,
         stagePadding: 30,
-        margin: 15,
+        margin: 12,
       },
       575: {
         items: 1,
-        stagePadding: 50,
-        margin: 35,
+        stagePadding: 100,
+        margin: 20,
       },
       767: {
         items: 2,
-        stagePadding: 60,
+        stagePadding: 0,
         margin: 15,
       },
       991: {
-
+        items:2,
+        margin: 20,
+        stagePadding: 100,
       },
       1199: {
 
@@ -115,16 +122,29 @@
     dots: true,
     responsive: {
       0: {
-
+        items: 1,
+        stagePadding: 13,
+        margin: 12,
+      },
+      370: {
+        items: 1,
+        stagePadding: 30,
+        margin: 12,
       },
       575: {
-
+        items: 1,
+        stagePadding: 100,
+        margin: 20,
       },
       767: {
-
+        items: 2,
+        stagePadding: 0,
+        margin: 15,
       },
       991: {
-
+        items:2,
+        margin: 20,
+        stagePadding: 100,
       },
       1199: {
 
@@ -206,7 +226,7 @@
       },
       991: {
         stagePadding: 80,
-        margin: 17
+        margin: 17,
       },
       1199: {
         stagePadding: 120,
