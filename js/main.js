@@ -24,9 +24,21 @@
       $('.offcanvas-overlay').removeClass('active');
     }
   });
-
+ 
   // owl-carousel
-  $('.product-slider-active').owlCarousel({
+  $('.product-slider-active').each(function() {
+    let carousel = $(this);
+    carousel.on('show.bs.dropdown', '[data-bs-toggle=dropdown]', function() {
+      // universal solution
+      let dropdown = bootstrap.Dropdown.getInstance(this);
+      $(dropdown._menu).insertAfter(carousel);
+
+      // alternative for this particular layout
+      // $(this).next('.dropdown-menu').insertAfter(carousel);
+    });
+  })
+  .owlCarousel({
+    
     loop: false,
     margin: 35,
     items: 2,
@@ -76,7 +88,17 @@
 
   // owl-carousel Category Mobile
 
-  $('.category__main__slider').owlCarousel({
+  $('.category__main__slider').each(function() {
+    let carousel = $(this);
+    carousel.on('show.bs.dropdown', '[data-bs-toggle=dropdown]', function() {
+      // universal solution
+      let dropdown = bootstrap.Dropdown.getInstance(this);
+      $(dropdown._menu).insertAfter(carousel);
+
+      // alternative for this particular layout
+      // $(this).next('.dropdown-menu').insertAfter(carousel);
+    });
+  }).owlCarousel({
     loop: false,
     margin: 15,
     items: 1,
@@ -112,7 +134,17 @@
 
   // owl-carousel Product Mobile
 
-  $('.product-list-wrap2').owlCarousel({
+  $('.product-list-wrap2').each(function() {
+    let carousel = $(this);
+    carousel.on('show.bs.dropdown', '[data-bs-toggle=dropdown]', function() {
+      // universal solution
+      let dropdown = bootstrap.Dropdown.getInstance(this);
+      $(dropdown._menu).insertAfter(carousel);
+
+      // alternative for this particular layout
+      // $(this).next('.dropdown-menu').insertAfter(carousel);
+    });
+  }).owlCarousel({
     loop: false,
     margin: 15,
     items: 1,
@@ -199,7 +231,17 @@
   });
 
 
-  $('.category-wrap-slider').owlCarousel({
+  $('.category-wrap-slider').each(function() {
+    let carousel = $(this);
+    carousel.on('show.bs.dropdown', '[data-bs-toggle=dropdown]', function() {
+      // universal solution
+      let dropdown = bootstrap.Dropdown.getInstance(this);
+      $(dropdown._menu).insertAfter(carousel);
+
+      // alternative for this particular layout
+      // $(this).next('.dropdown-menu').insertAfter(carousel);
+    });
+  }).owlCarousel({
     loop: false,
     margin:25,
     items: 3,
