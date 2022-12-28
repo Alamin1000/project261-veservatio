@@ -350,3 +350,13 @@
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
     border-top-color: var(--theme__color1) !important;
 }
+
+
+/* scrollbar */
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: var(--theme__color1) !important;
+}
+.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+	width: 6px;
+	background-color: #F2F2F2;
+}

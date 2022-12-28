@@ -1,4 +1,18 @@
 
+
+$(window).load(function () {
+  $(".custom-scrollbar").mCustomScrollbar({
+    axis:"x",
+    theme:"light-3",
+    advanced:{autoExpandHorizontalScroll:true}
+  });
+  $(".custom-scrollbar-vertical").mCustomScrollbar({
+    axis:"y",
+    theme:"light-3",
+    advanced:{autoExpandHorizontalScroll:true}
+  });
+});
+
 (function ($) {
   "use strict";
 
@@ -304,3 +318,5 @@ $(document).ready(function () {
   $("#preloader").fadeOut(500);
 
 })
+
+

@@ -638,17 +638,17 @@ p:last-child {
 .showcase__nav {
   max-height: 518px;
   overflow: auto;
-  /*! -ms-overflow-style: none; */
-  /*! scrollbar-width: none; */
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
 }
 /* .showcase__nav::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-/* } */
+    display: none; 
+} */
 
 
 .showcase__nav ul {
   --line-gap: 96px;
-  --line-width: 6px;
+  --line-width: 0px !important;
   gap: 28px;
   flex-direction: column;
   padding-right: var(--line-gap);
